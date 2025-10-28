@@ -48,12 +48,13 @@ CREATE TABLE Student
     Foreign Key (Type, Year, InState, Graduate) references Tuition(Type, Year, InState, Graduate)    
 );
 
-CREATE TABLE Fringe
-(
-	Type VARCHAR(50) NOT NULL,  -- same domain as studenttype or stafftype basically covers both
+CREATE TABLE Fringe (
+    InstitutionID INT NOT NULL,
+    Type VARCHAR(50) NOT NULL, -- same domain as studenttype or stafftype basically covers both
     Year YEAR NOT NULL,
-    Val DECIMAL (5, 4) NOT NULL,
-    primary key (Type, Year)
+    Val DECIMAL(5,4) NOT NULL,
+    PRIMARY KEY (InstitutionID, Type, Year),
+    FOREIGN KEY (InstitutionID) REFERENCES Institution(InstitutionID)
 );
 
 CREATE TABLE Travel (			-- Possible Travels

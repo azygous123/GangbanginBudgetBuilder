@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<travelmodes>
+	<mode code="Airfare">Airfare</mode>
+	<mode code="Lodging">Lodging</mode>
+	<mode code="PerDiem">Per Diem</mode>
+	<mode code="RentalCar">Rental Car</mode>
+	<mode code="Mileage">Mileage</mode>
+	<mode code="Bus">Bus</mode>
+	<mode code="Taxi">Taxi / Rideshare</mode>
+	<mode code="Train">Train</mode>
+	<mode code="Conference">Conference</mode>
+</travelmodes>
+

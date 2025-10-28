@@ -231,6 +231,15 @@ namespace FrontendSQLDev
         protected global::System.Web.UI.WebControls.Panel PanelFringe;
 
         /// <summary>
+        /// FringeInst control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList FringeInst;
+
+        /// <summary>
         /// FringeVal control.
         /// </summary>
         /// <remarks>
@@ -246,7 +255,7 @@ namespace FrontendSQLDev
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FringeType;
+        protected global::System.Web.UI.WebControls.DropDownList FringeType;
 
         /// <summary>
         /// FringeYear control.
@@ -312,13 +321,22 @@ namespace FrontendSQLDev
         protected global::System.Web.UI.WebControls.TextBox TrvCity;
 
         /// <summary>
+        /// TrvStateLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TrvStateLbl;
+
+        /// <summary>
         /// TrvState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TrvState;
+        protected global::System.Web.UI.WebControls.DropDownList TrvState;
 
         /// <summary>
         /// TrvCountry control.
@@ -408,7 +426,7 @@ namespace FrontendSQLDev
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InstState;
+        protected global::System.Web.UI.WebControls.DropDownList InstState;
 
         /// <summary>
         /// InstCountry control.
@@ -417,7 +435,7 @@ namespace FrontendSQLDev
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InstCountry;
+        protected global::System.Web.UI.WebControls.DropDownList InstCountry;
 
         /// <summary>
         /// InstFARate control.

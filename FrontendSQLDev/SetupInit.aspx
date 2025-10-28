@@ -40,10 +40,12 @@
         <asp:CheckBox ID="FacHourly" runat="server" Text="Hourly" />
         &nbsp;// Add Yearly toggle trigger later<br /> Staff Type:<br />
         <asp:DropDownList ID="FacType" runat="server">
-            <asp:ListItem Value="0">Faculty</asp:ListItem>
-            <asp:ListItem Value="1">Staff</asp:ListItem>
-            <asp:ListItem Value="2">Post Doc</asp:ListItem>
-            <asp:ListItem Value="3">Unaffiliated</asp:ListItem>
+            <asp:ListItem Value="Faculty">Faculty</asp:ListItem>
+            <asp:ListItem Value="Staff">Staff</asp:ListItem>
+            <asp:ListItem Value="Post Doc">Post Doc</asp:ListItem>
+            <asp:ListItem Value="Graduate">Graduate</asp:ListItem>
+            <asp:ListItem>Undergrad</asp:ListItem>
+            <asp:ListItem>Temp Help</asp:ListItem>
         </asp:DropDownList>
         <br />
         <br />
@@ -72,11 +74,23 @@
         <br />
 </asp:Panel>
      <asp:Panel ID="PanelFringe" runat="server" Visible="False">
+         Associated Institution:<br />
+         <asp:DropDownList ID="FringeInst" runat="server">
+         </asp:DropDownList>
+         <br />
+         <br />
          Fringe Percentage:<br />
          <asp:TextBox ID="FringeVal" runat="server"></asp:TextBox>
          <br />
          Type:<br />
-         <asp:TextBox ID="FringeType" runat="server"></asp:TextBox>
+         <asp:DropDownList ID="FringeType" runat="server">
+             <asp:ListItem Value="Faculty">Faculty</asp:ListItem>
+             <asp:ListItem Value="Staff">Staff</asp:ListItem>
+             <asp:ListItem Value="Post Doc">Post Doc</asp:ListItem>
+             <asp:ListItem Value="Graduate">Graduate</asp:ListItem>
+             <asp:ListItem Value="Undergrad">Undergrad</asp:ListItem>
+             <asp:ListItem>Temp Help</asp:ListItem>
+         </asp:DropDownList>
          <br />
          Year:<br />
          <asp:TextBox ID="FringeYear" runat="server" TextMode="Number"></asp:TextBox>
@@ -97,14 +111,16 @@
         City:<br />
         <asp:TextBox ID="TrvCity" runat="server"></asp:TextBox>
         <br />
-        State: // Defaults to country name if foreign<br />
-        <asp:TextBox ID="TrvState" runat="server"></asp:TextBox>
+        <asp:Label ID="TrvStateLbl" runat="server" Text="State:"></asp:Label>
+        &nbsp; // Defaults to country name if foreign<br />
+        <asp:DropDownList ID="TrvState" runat="server">
+        </asp:DropDownList>
         <br />
         Country:<br />
         <asp:DropDownList ID="TrvCountry" runat="server">
         </asp:DropDownList>
         <br />
-        <asp:CheckBox ID="TrvForeign" runat="server" Text="Foreign" />
+        <asp:CheckBox ID="TrvForeign" runat="server" Text="Foreign" AutoPostBack="True" OnCheckedChanged="TrvForeign_CheckedChanged" />
         <br />
         Amount:<br />
         <asp:TextBox ID="TrvAmount" runat="server"></asp:TextBox>
@@ -126,10 +142,12 @@
         <asp:TextBox ID="InstCity" runat="server"></asp:TextBox>
         <br />
         State:<br />
-        <asp:TextBox ID="InstState" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="InstState" runat="server">
+        </asp:DropDownList>
         <br />
         Country:<br />
-        <asp:TextBox ID="InstCountry" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="InstCountry" runat="server">
+        </asp:DropDownList>
         <br />
         FARate:<br />
         <asp:TextBox ID="InstFARate" runat="server"></asp:TextBox>

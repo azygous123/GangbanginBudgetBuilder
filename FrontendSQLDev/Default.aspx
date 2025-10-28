@@ -1,33 +1,22 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FrontendSQLDev._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server" >
-    <asp:Panel ID="studentPNL" DefaultButton="Button1" runat="server" >
+    <asp:Panel ID="studentPNL" runat="server" >
+    <h1>
+        Welcome to Budget Express</h1>
     <p>
-        Welcome to the Gangbanin Budget Builder</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        <asp:Label ID="Label1" runat="server" Text="Welcome..."></asp:Label>
-    </p>
-    <p>
-        Add a Student to the Database:<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        View Database Table:</p>
+        <p>
+            <asp:DropDownList ID="DropDownListMain" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListMain_SelectedIndexChanged">
+                <asp:ListItem Value="0">Student</asp:ListItem>
+                <asp:ListItem Value="1">Faculty</asp:ListItem>
+                <asp:ListItem Selected="True" Value="2">Tuition</asp:ListItem>
+                <asp:ListItem Value="3">Travel Profile</asp:ListItem>
+                <asp:ListItem Value="4">Institution</asp:ListItem>
+                <asp:ListItem Value="5">Fringe</asp:ListItem>
+            </asp:DropDownList>
+            <br />
         </p>
-    <p>
-        First name:</p>
-    <p>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-</p>
-    <p>
-        Last name:</p>
-    <p>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-</p>
-    <p>
-        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
-    <br />
-</p>
 <p>
     <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
     </asp:GridView>
