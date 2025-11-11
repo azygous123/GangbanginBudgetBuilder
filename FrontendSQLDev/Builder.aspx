@@ -89,147 +89,226 @@
             row.parentNode.removeChild(row);
         }
     </script>
-</asp:Content>
+    <style type="text/css">
+        .auto-style1 {
+            height: 21px;
+            width: 246px;
+        }
+        .auto-style2 {
+            width: 246px;
+        }
+    </style>
+    </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
         <div class="container m-4">
-            <asp:Literal ID="OutputLiteral" runat="server"></asp:Literal> <%-- let server send html to client --%>
+            <asp:Panel ID="StartPanel" runat="server">
+                <%-- let server send html to client --%>
+                <h1>PI Budget Builder</h1>
+                <h2>Project Information:</h2>
+                
+                    PI Name:<br />&nbsp;<asp:DropDownList ID="PiName" runat="server">
+                </asp:DropDownList>
+                <br />
+                <br />
+                Project Title:
+                <br />
+                <asp:TextBox ID="ProjectTitle0" runat="server" />
+                <br />
+                <br />
+                Funding Source:<br />&nbsp;<asp:TextBox ID="FundingSource0" runat="server" />
+                <br />
+                <br />
+                Institution:<br /> <asp:DropDownList ID="InstitutionDropdown" runat="server">
+                    </asp:DropDownList>
+                    <br />
+                    <br />
+                    Start Date:
+                <br />
+                <asp:TextBox ID="StartDate" runat="server" TextMode="Date" />
+                <br />
+                <br />
+                End Date:<br />
+                <asp:TextBox ID="EndDate" runat="server" TextMode="Date" />
+                <br />
+                <p>
+                    &nbsp;</p>
+            </asp:Panel>
+            <asp:Panel ID="EmpoloyeePanel" runat="server">
+                <br />
+                <h2>Project Employees</h2>
+                <br />
+                <br />
+                <br />
+            </asp:Panel>
+             <asp:Panel ID="TravelPanel" runat="server">
+                 <h2>Travel Information</h2>
+                 <br />
+                 <br />
+                 <br />
+            </asp:Panel>
+            <asp:Panel ID="OtherPanel" runat="server">
+                <br />
+                <h2>Other Direct Costs</h2>
+                <p>
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                    </asp:DropDownList>
+                </p>
+                <p>
+                    &nbsp;</p>
 
-            <h1>PI Budget Builder</h1>
+                <p>
+                    <table style="width:100%;">
+                        <tr>
+                            <td>
+                                <asp:Panel ID="Year1" runat="server">
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td class="auto-style1">Category</td>
+                                            <td rowspan="10">
+                                                <asp:Panel ID="Panel1" runat="server">
+                                                    Year1<br />
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox16" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox21" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox26" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox31" runat="server"></asp:TextBox>
+                                                </asp:Panel>
+                                            </td>
+                                            <td rowspan="10">
+                                                <asp:Panel ID="Panel2" runat="server">
+                                                    Year2<br />
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox22" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox27" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox32" runat="server"></asp:TextBox>
+                                                </asp:Panel>
+                                            </td>
+                                            <td rowspan="10">
+                                                <asp:Panel ID="Panel3" runat="server">
+                                                    Year3<br />
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox23" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox28" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox33" runat="server"></asp:TextBox>
+                                                </asp:Panel>
+                                            </td>
+                                            <td rowspan="10">
+                                                <asp:Panel ID="Panel4" runat="server">
+                                                    Year4<br />
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox19" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox24" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox29" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox34" runat="server"></asp:TextBox>
+                                                </asp:Panel>
+                                            </td>
+                                            <td rowspan="10">
+                                                <asp:Panel ID="Panel5" runat="server">
+                                                    Year5<br />
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox20" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox25" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox30" runat="server"></asp:TextBox>
+                                                    <br />
+                                                    <asp:TextBox ID="TextBox35" runat="server"></asp:TextBox>
+                                                </asp:Panel>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Materials and supplies</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">&lt;5k small equipment</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Publication costs</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Computer services</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Software</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Facility usage fees</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Conference registration</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style2">Grad student tuition &amp; health insurance</td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+                <br />
 
-            <h2>Project Information</h2> <br />
-
-            <asp:Label ID="PILabel" runat="server" Text="PI Name: " />
-            <asp:TextBox ID="PIText" runat="server" /> <br /><br />
-
-            <asp:Label ID="TitleLabel" runat="server" Text="Project Title: " /> 
-            <asp:TextBox ID="ProjectTitle" runat="server" /> <br /><br />
-
-            <asp:Label ID="FundingLabel" runat="server" Text="Funding Source: " /> 
-            <asp:TextBox ID="FundingSource" runat="server" /> <br /><br />
-
-            <asp:Label ID="InstitutionLabel" runat="server" Text="Institution: " />
-            <asp:DropDownList ID="InstitutionDropdown" runat="server">
-                <asp:ListItem Text="University of Idaho" />
-            </asp:DropDownList> <br /><br />
-
-            <asp:Label ID="StartLabel" runat="server" Text="Start Date: " /> 
-            <asp:TextBox ID="StartDate" runat="server" /> <br /><br />
-
-            <asp:Label ID="EndLabel" runat="server" Text="End Date: " /> 
-            <asp:TextBox ID="EndDate" runat="server" /> <br /><br />
-             
-             <h2>Project Employees</h2>
-
-            <table id="employeeTable" border="1">
-                <tr>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Hourly Rate</th>
-                    <th>Hours Y1</th>
-                    <th>Hours Y2</th>
-                    <th>Hours Y3</th>
-                    <th>Hours Y4</th>
-                    <th>Hours Y5</th>
-                    <th>Action</th>
-                </tr>
-            </table> <br />           
-            <input type="button" value="Add Employee" onclick="addRow()" /> <br /><br />
-
-            <h2>Travel Information</h2>
-
-            <table id="travelTable" border="1">
-                <tr>
-                    <th>Destination</th>
-                    <th>Duration (Days)</th>
-                    <th>Domestic?</th>
-                    <th>Year</th>
-                    <th>Action</th>
-                </tr>
-            </table> <br />
-
-            <input type="button" value="Add Trip" onclick="addTrip()" /> <br /><br />
-
-            <h2>Other Direct Costs</h2>
-
-            <table id="otherCostsTable" border="1">
-                <tr>
-                    <th>Category</th>
-                    <th>Year 1</th>
-                    <th>Year 2</th>
-                    <th>Year 3</th>
-                    <th>Year 4</th>
-                    <th>Year 5</th>
-                </tr>
-                <tr>
-                    <td>Materials and supplies</td>
-                    <td><input type="number" name="materialY1" min="0" /></td>
-                    <td><input type="number" name="materialY2" min="0" /></td>
-                    <td><input type="number" name="materialY3" min="0" /></td>
-                    <td><input type="number" name="materialY4" min="0" /></td>
-                    <td><input type="number" name="materialY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td><5k small equipment</td>
-                    <td><input type="number" name="smallEquipY1" min="0" /></td>
-                    <td><input type="number" name="smallEquipY2" min="0" /></td>
-                    <td><input type="number" name="smallEquipY3" min="0" /></td>
-                    <td><input type="number" name="smallEquipY4" min="0" /></td>
-                    <td><input type="number" name="smallEquipY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Publication costs</td>
-                    <td><input type="number" name="publicationY1" min="0" /></td>
-                    <td><input type="number" name="publicationY2" min="0" /></td>
-                    <td><input type="number" name="publicationY3" min="0" /></td>
-                    <td><input type="number" name="publicationY4" min="0" /></td>
-                    <td><input type="number" name="publicationY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Computer services</td>
-                    <td><input type="number" name="compServiceY1" min="0" /></td>
-                    <td><input type="number" name="compServiceY2" min="0" /></td>
-                    <td><input type="number" name="compServiceY3" min="0" /></td>
-                    <td><input type="number" name="compServiceY4" min="0" /></td>
-                    <td><input type="number" name="compServiceY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Software</td>
-                    <td><input type="number" name="softwareY1" min="0" /></td>
-                    <td><input type="number" name="softwareY2" min="0" /></td>
-                    <td><input type="number" name="softwareY3" min="0" /></td>
-                    <td><input type="number" name="softwareY4" min="0" /></td>
-                    <td><input type="number" name="softwareY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Facility usage fees</td>
-                    <td><input type="number" name="facilityFeeY1" min="0" /></td>
-                    <td><input type="number" name="facilityFeeY2" min="0" /></td>
-                    <td><input type="number" name="facilityFeeY3" min="0" /></td>
-                    <td><input type="number" name="facilityFeeY4" min="0" /></td>
-                    <td><input type="number" name="facilityFeeY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Conference registration</td>
-                    <td><input type="number" name="conferenceY1" min="0" /></td>
-                    <td><input type="number" name="conferenceY2" min="0" /></td>
-                    <td><input type="number" name="conferenceY3" min="0" /></td>
-                    <td><input type="number" name="conferenceY4" min="0" /></td>
-                    <td><input type="number" name="conferenceY5" min="0" /></td>
-                </tr>
-                <tr>
-                    <td>Grad student tuition & health insurance</td>
-                    <td><input type="number" name="gradHelpY1" min="0" /></td>
-                    <td><input type="number" name="gradHelpY2" min="0" /></td>
-                    <td><input type="number" name="gradHelpY3" min="0" /></td>
-                    <td><input type="number" name="gradHelpY4" min="0" /></td>
-                    <td><input type="number" name="gradHelpY5" min="0" /></td>
-                </tr>
-            </table>
-            <input type="button" value="Add Direct Cost" onclick="addDirectCost()" /> <br /><br />
-            
-            
-
-            <asp:Button ID="SubmitButton" runat="server" Text="Submit Budget" OnClick="SubmitButton_Click" />
+            </asp:Panel>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            &nbsp;
+            <asp:Button ID="Back1" runat="server" Text="Back" OnClick="Back1_Click" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Next1" runat="server" Text="Next" OnClick="Next1_Click" />
+            <br />
+            <br />
 
         </div>
 </asp:Content>

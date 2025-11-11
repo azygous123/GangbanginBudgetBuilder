@@ -178,7 +178,7 @@ namespace FrontendSQLDev
         private void TuitionPopulate()
         {
             //TBStudentFirst.Text = mainConnect;
-            string sql = "SELECT Amount, Type, Year, InState, Graduate FROM Tuition";
+            string sql = "SELECT Amount, Type, Year, InState, Graduate FROM Tuition WHERE Year = 2025";
             //Read command
             using (MySqlConnection connectionMain = new MySqlConnection(mainConnect)) 
             using (MySqlCommand commandMain = new MySqlCommand(sql, connectionMain))

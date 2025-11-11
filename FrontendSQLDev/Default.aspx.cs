@@ -22,8 +22,21 @@ namespace FrontendSQLDev
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            int CurrentSel = DropDownListMain.SelectedIndex;
+            string sql = "Select * From Tuition";
+            using (MySqlConnection connectionMain = new MySqlConnection(connectionString))
+            using (MySqlCommand commandMain = new MySqlCommand(sql, connectionMain))
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(commandMain))
+            {
+                DataTable tuitionTable = new DataTable();
+                adapter.Fill(tuitionTable);
 
 
+
+                GridView1.DataSource = tuitionTable;
+                GridView1.DataBind();
+
+            }
 
         }
 
